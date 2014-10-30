@@ -40,11 +40,12 @@ class BackgroundFilter extends PIXI.AbstractFilter
 
             'void main(void) {',
                 '//bool isEqual = mod(floor(vTextureCoord.x*1025.),2.)==0.;',
-                'vec2 center = vec2(.5,.5);'
+                'vec2 center = vec2(.5,.33);'
                 'float angle = atan(center.y-vTextureCoord.y,center.x-vTextureCoord.x)*3.14*4.+time;'
-                'float rand = snoise(vec3(angle,angle,0.),3.14*1. );'
+                'float rand = snoise(vec3(angle,angle,0.),3.14*2. );'
                 'float dist = distance(vTextureCoord, center);'
-                'vec3 color = vec3(rand*.2*dist);',
+                'vec3 color = vec3(rand*.3*(1.-dist));',
+                'color = color*dist*1.5;',
                 'gl_FragColor =  vec4( color, 1. );',
             '}'
         ];

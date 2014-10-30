@@ -25,7 +25,7 @@ class MetaballFilter extends PIXI.AbstractFilter
             'void main(void) {',
                 'vec4 texture = texture2D( uSampler, vTextureCoord );',
                 'vec4 color;',
-                'if (texture.r > min){color = vec4(1.,1.,1.,8.);} else if (texture.r > min/2.){color = vec4(0.2,0.2,0.2,1.);} else{color = vec4(0.);}',
+                'if (texture.r > min){color = vec4(.95,.95,.95,.0);} else if (texture.r > min/2.){color = vec4(0.15,0.15,0.15,.7);} else{color = vec4(0.);}',
                 'gl_FragColor =  color;',
             '}'
         ];

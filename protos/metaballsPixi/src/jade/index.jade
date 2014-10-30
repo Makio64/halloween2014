@@ -1,4 +1,9 @@
 doctype html
+//-  .-.
+//- (o o) boo!
+//- | O \
+//-  \   \
+//-   `~~~'
 html(lang="en")
 	head
 		meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
@@ -9,16 +14,23 @@ html(lang="en")
 		//- facebook meta
 		meta(property="og:site_name", content="Makiopolis")
 		meta(property="og:title", content="Halloween Experiment")
-		meta(property="og:description", content="Pixijs experiment for halloween")
+		meta(property="og:description", content="An halloween Experiment by David Ronai")
 		meta(property="og:type", content="website")
 		meta(property="og:url", content="")
 		meta(property="og:image", content="")
 
-		title Halloween Experiment
+		title Booooooo
 		// build:css css/main.css
 		link(rel='stylesheet', href='css/main.css')
 		// endbuild
 	body
+
+		#about
+		
+			p Made by <a target="_blank" href="https://twitter.com/makio64">@Makio64</a> using Pixi.js
+			p Inspired by <a target="_blank" href="http://33.media.tumblr.com/1d431c9488f527b3f0fbf54cd929d642/tumblr_ncypr58Ias1s32c11o3_1280.jpg">#inktober02</a> from <a target="_blank" href="https://twitter.com/veeakanoun">violaine briat</a>
+			//- p Src <a target="_blank" href="">github</a>
+
 		// build:js js/vendor.js
 		// bower:js
 		
@@ -29,9 +41,11 @@ html(lang="en")
 		script(type='text/javascript', src='js/core/2d/Stage2d.js')
 		script(type='text/javascript', src='js/core/scenes/Scene.js')
 		script(type='text/javascript', src='js/core/scenes/SceneTraveler.js')
+		script(type='text/javascript', src='js/core/utils/ObjectPool.js')
 
-		script(type='text/javascript', src='js/test/Metaball2dScene.js')
+		//- script(type='text/javascript', src='js/test/Metaball2dScene.js')
 		script(type='text/javascript', src='js/test/GhostScene.js')
+		script(type='text/javascript', src='js/test/LoaderScene.js')
 		script(type='text/javascript', src='js/test/MetaballFilter.js')
 		script(type='text/javascript', src='js/test/BackgroundFilter.js')
 

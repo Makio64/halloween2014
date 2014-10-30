@@ -7,31 +7,37 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta property="og:site_name" content="Makiopolis">
     <meta property="og:title" content="Halloween Experiment">
-    <meta property="og:description" content="Pixijs experiment for halloween">
+    <meta property="og:description" content="An halloween Experiment by David Ronai">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
-    <title>Halloween Experiment</title>
+    <title>Booooooo</title>
     <!-- build:css css/main.css-->
     <link rel="stylesheet" href="css/main.css">
     <!-- endbuild-->
   </head>
   <body>
+    <div id="about">
+      <p>Made by <a target="_blank" href="https://twitter.com/makio64">@Makio64</a> using Pixi.js</p>
+      <p>Inspired by <a target="_blank" href="http://33.media.tumblr.com/1d431c9488f527b3f0fbf54cd929d642/tumblr_ncypr58Ias1s32c11o3_1280.jpg">#inktober02</a> from <a target="_blank" href="https://twitter.com/veeakanoun">violaine briat</a></p>
+    </div>
     <!-- build:js js/vendor.js-->
     <!-- bower:js-->
-    <script src="bower_components/pixi.js/bin/pixi.js"></script>
+    <script src="bower_components/pixi.js/bin/pixi.dev.js"></script>
     <script src="bower_components/raf.js/raf.js"></script>
     <script src="bower_components/dat-gui/build/dat.gui.js"></script>
     <script src="bower_components/isMobile/isMobile.js"></script>
     <script src="bower_components/isMobile/isMobile.min.js"></script>
+    <script src="bower_components/howler.js/howler.js"></script>
     <!-- endbower-->
     <!-- endbuild-->
     <!-- build:js js/main.js-->
     <script type="text/javascript" src="js/core/2d/Stage2d.js"></script>
     <script type="text/javascript" src="js/core/scenes/Scene.js"></script>
     <script type="text/javascript" src="js/core/scenes/SceneTraveler.js"></script>
-    <script type="text/javascript" src="js/test/Metaball2dScene.js"></script>
+    <script type="text/javascript" src="js/core/utils/ObjectPool.js"></script>
     <script type="text/javascript" src="js/test/GhostScene.js"></script>
+    <script type="text/javascript" src="js/test/LoaderScene.js"></script>
     <script type="text/javascript" src="js/test/MetaballFilter.js"></script>
     <script type="text/javascript" src="js/test/BackgroundFilter.js"></script>
     <script type="text/javascript" src="js/Main.js"></script>

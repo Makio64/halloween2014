@@ -10,6 +10,7 @@
 		"pixi.js"			: "dev",
 		"raf.js"			: "*",
 		"dat-gui"			: "*",
-		"isMobile"			: "*"
+		"isMobile"			: "*",
+		"howler.js"			: "*"
 	}
 }

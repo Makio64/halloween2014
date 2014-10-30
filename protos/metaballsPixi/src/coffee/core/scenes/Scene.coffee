@@ -20,6 +20,7 @@ class Scene extends PIXI.DisplayObjectContainer
 		return
 
 	transitionOut:()->
+		@onTransitionOutComplete()
 		return
 
 	onTransitionInComplete:()->

@@ -32,8 +32,8 @@ class SceneTraveler
 			Stage2d.stage.removeChild(@currentScene)
 		
 		@currentScene = @nextScene
-		@currentScene.transitionIn()
 		Stage2d.stage.addChild(@currentScene)
+		@currentScene.transitionIn()
 		return
 
 
