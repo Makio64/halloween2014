@@ -18,7 +18,6 @@ class Main
 
 		PIXI.dontSayHello = true;
 		console.log('Boooo by @Makio64')
-		console.log('Powered by Pixi.js v2.0')
 		Stage2d.init({transparent:false,antialias:false, background:0xFF0000})
 
 		SceneTraveler.to(new LoaderScene())

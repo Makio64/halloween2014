@@ -6,9 +6,11 @@ class GhostScene extends Scene
 			urls: ['sfx/space_sounds_01.mp3'],
 			autoplay: true,
 			loop: true,
-			volume: 0.5,
+			volume: 1.0,
 		});
 		start = new PIXI.Point(window.innerWidth/2, window.innerHeight*.75)
+
+		@timeWhisper = 0
 
 		if !isMobile.any
 			@pool = new ObjectPool(()=>
@@ -75,9 +77,9 @@ class GhostScene extends Scene
 		@mute = false
 		gui.add(@,'mute').onChange(()=>
 			if @mute
-				@sound.volume(0)
+				Howler.mute()
 			else
-				@sound.volume(0.5)
+				Howler.unmute()
 
 			return
 		).name('mute sound')
@@ -120,6 +122,7 @@ class GhostScene extends Scene
 			@backgroundFilter.uniforms.time.value=Math.random()
 
 		@time += dt
+		@timeWhisper += dt
 
 		if !@auto
 			@ball.scale.y += -@ball.scale.y*.03
@@ -129,7 +132,16 @@ class GhostScene extends Scene
 			@ball.scale.y += (target-@ball.scale.y)*.05
 			@ball.scale.x = @ball.scale.y
 
-		
+		# whisper sound
+		if @timeWhisper > 3000
+			n = Math.floor(Math.random()*9)+1
+			@sound = new Howl({
+				urls: ['sfx/ghost0'+n+'.mp3'],
+				autoplay: true,
+				loop: false,
+				volume: .2,
+			});
+			@timeWhisper = 0
 
 		if ((@auto && @time>=@tick) || (!@auto && @ghosts.length == 0))
 			start = new PIXI.Point(window.innerWidth/2, window.innerHeight*.75)
